@@ -1,9 +1,4 @@
-import time
-
-import pytest
 from .pages.product_page import ProductPage
-from .pages.base_page import BasePage
-from .pages.locators import AddGoodToBasket
 
 
 def test_guest_cant_see_success_message_after_adding_product_to_basket(browser):

@@ -47,7 +47,6 @@ def test_guest_cant_see_product_in_basket_opened_from_main_page(browser):
     link = "http://selenium1py.pythonanywhere.com/ru/"
     page = BasketPage(browser, link)
     page.open()
-    # page.add_good_to_basket() можно добавить товар и проверить с товаром в корзине
     page.open_basket()
     page.check_goods_exists()
     page.check_basket_empty()
