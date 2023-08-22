@@ -31,3 +31,12 @@ class ProductPage(BasePage):
     def promo_banner_is_correct(self):
         assert self.browser.find_element(*AddGoodToBasket.PROMO_BANNER).text != (
             'Coders at Work')
+
+    def should_not_be_success_message(self):
+        assert self.is_not_element_present(*AddGoodToBasket.MSG_SUCCESS), \
+            "Success message is presented, but should not be"
+
+
+    def should_not_be_success_message_ver2(self):
+        assert self.is_disappeared(*AddGoodToBasket.MSG_SUCCESS), \
+            "Success message is presented, but should not be"
