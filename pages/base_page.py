@@ -1,6 +1,6 @@
 import math
 import time
-from .locators import BasePageLocators
+from .locators import BasePageLocators, AddGoodToBasket
 from selenium.common.exceptions import NoSuchElementException, TimeoutException
 from selenium.common.exceptions import NoAlertPresentException
 from selenium.webdriver.support.wait import WebDriverWait
@@ -15,6 +15,9 @@ class BasePage():
 
     def open(self):
         self.browser.get(self.url)
+
+    def open_basket(self):
+        self.browser.find_element(*AddGoodToBasket.BTN_VIEW_BASKET).click()
 
     def go_to_login_page(self):
         link = self.browser.find_element(*BasePageLocators.LOGIN_LINK)

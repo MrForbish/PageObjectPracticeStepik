@@ -25,3 +25,8 @@ class AddGoodToBasket():
 class BasePageLocators():
     LOGIN_LINK = (By.CSS_SELECTOR, "#login_link")
     LOGIN_LINK_INVALID = (By.CSS_SELECTOR, "#login_link_inc")
+
+
+class BasketPageLocators():
+    GOOD_ITEMS = (By.ID, 'basket_formset')
+    BASKET_EMPTY = (By.XPATH, '//div[@id="content_inner"]/p')
