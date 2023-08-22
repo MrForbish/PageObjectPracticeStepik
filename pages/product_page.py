@@ -28,3 +28,6 @@ class ProductPage(BasePage):
     def should_be_button_basket(self):
         assert self.is_element_present(*AddGoodToBasket.BTN_TO_BASKET), "Button basket is not presented"
 
+    def promo_banner_is_correct(self):
+        assert self.browser.find_element(*AddGoodToBasket.PROMO_BANNER).text != (
+            'Coders at Work')

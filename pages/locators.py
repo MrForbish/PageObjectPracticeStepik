@@ -18,3 +18,4 @@ class AddGoodToBasket():
     BTN_VIEW_BASKET = (By.XPATH, '//*[@id="default"]/header/div[1]/div/div[2]/span/a')
     GOOD_PRICE = (By.XPATH, '//div[@id="content_inner"]/article/div[1]/div[2]/p[1]')
     TOTAL_PRICE = (By.XPATH, '//div[@id="basket_totals"]/table/tbody/tr[10]/td/h3')
+    PROMO_BANNER = (By.XPATH, '//div[@id="messages"]/div[1]/div/strong')
